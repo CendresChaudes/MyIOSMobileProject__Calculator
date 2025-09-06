@@ -5,7 +5,6 @@ use_frameworks!
 target 'Calculator' do
 	pod 'SwiftLint', '0.59.1'
 
-
 	target 'CalculatorTests' do
 		inherit! :search_paths
 	end

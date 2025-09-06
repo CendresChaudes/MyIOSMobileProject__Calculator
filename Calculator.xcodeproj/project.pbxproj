@@ -2370,6 +2370,7 @@
 		B2043B612E6B376900EF13FD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B204593A2E6B1B4E00EF13FD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B27FB80D2E6B71370057F01C /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .periphery.yml; sourceTree = "<group>"; };
+		B27FB8B42E6C972B0057F01C /* .periphery-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".periphery-version"; sourceTree = "<group>"; };
 		BFCF86D2A262705615C99036 /* Pods-CalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-CalculatorTests/Pods-CalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E47306656BA0741B7E9470 /* Pods_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8548E046255FD0209DA9A85 /* Pods-CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-CalculatorTests/Pods-CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -9251,6 +9252,7 @@
 				B20434EF2E6B19AC00EF13FD /* Podfile */,
 				B204593A2E6B1B4E00EF13FD /* .gitignore */,
 				B27FB80D2E6B71370057F01C /* .periphery.yml */,
+				B27FB8B42E6C972B0057F01C /* .periphery-version */,
 				B20434E12E6A3C8900EF13FD /* .ruby-version */,
 				B2043B612E6B376900EF13FD /* .swiftlint.yml */,
 				E05A7A8C7140F8E23D924AE0 /* Pods */,
@@ -9487,7 +9489,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint lint --fix\nelse\n    echo \"Warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			shellScript = "SWIFTLINT_PATH=\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\nif [ ! -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[!] SwiftLint is not installed or not found at $SWIFTLINT_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[*] Starting scan code with linter for configuration: $CONFIGURATION.\"\n    \n    \"$SWIFTLINT_PATH\" lint\n    \n    echo \"[*] Scan completed.\"\nfi\n";
 		};
 		B27FB80C2E6B6BDF0057F01C /* Periphery */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -9506,7 +9508,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "PERIPHERY_PATH=\"/opt/homebrew/bin/periphery\"\n\nif [ ! -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[!] Periphery is not installed or not found at $PERIPHERY_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[*] Starting scan for unused code for configuration: $CONFIGURATION\"\n    echo $BUILD_ROOT\n    PROJECT_DERIVED_PATH=\"${BUILD_ROOT%/Build/*}\"\n    DATA_STORE_PATH=\"$PROJECT_DERIVED_PATH/Index.noindex/DataStore\"\n    \n    \"$PERIPHERY_PATH\" clear-cache\n    \"$PERIPHERY_PATH\" scan --index-store-path $DATA_STORE_PATH --skip-build\nfi\n";
+			shellScript = "PERIPHERY_PATH=\"/opt/homebrew/bin/periphery\"\n\nif [ ! -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[!] Periphery is not installed or not found at $PERIPHERY_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[*] Starting scan for unused code for configuration: $CONFIGURATION.\"\n\n    PROJECT_DERIVED_PATH=\"${BUILD_ROOT%/Build/*}\"\n    DATA_STORE_PATH=\"$PROJECT_DERIVED_PATH/Index.noindex/DataStore\"\n    \n    \"$PERIPHERY_PATH\" clear-cache\n    \"$PERIPHERY_PATH\" scan --index-store-path $DATA_STORE_PATH --skip-build\n    \n    echo \"[*] Scan completed.\"\nfi\n";
 		};
 		C51EF37F0B80875132171F50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
