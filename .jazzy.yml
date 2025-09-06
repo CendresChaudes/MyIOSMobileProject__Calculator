@@ -1,0 +1,17 @@
+author: "Roman Pronin"
+module: Calculator
+module_version: 1.0.0
+
+include:
+  - Calculator/**
+output: docs
+
+clean: true
+min_acl: internal
+skip_undocumented: true
+
+xcodebuild_arguments:
+  - "-workspace"
+  - Calculator.xcworkspace
+  - "-scheme"
+  - Calculator
