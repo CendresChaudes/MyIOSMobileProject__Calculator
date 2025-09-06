@@ -1,0 +1,6 @@
+project: Calculator.xcworkspace
+
+schemes:
+- Calculator
+
+format: xcode
