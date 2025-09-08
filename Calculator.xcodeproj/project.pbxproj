@@ -2367,7 +2367,6 @@
 		B2043B0D2E6B2D1400EF13FD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2043B0E2E6B2D1400EF13FD /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2043B0F2E6B2D1400EF13FD /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2043B612E6B376900EF13FD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B204593A2E6B1B4E00EF13FD /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B27FB80D2E6B71370057F01C /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .periphery.yml; sourceTree = "<group>"; };
 		B27FB8B42E6C972B0057F01C /* .periphery-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".periphery-version"; sourceTree = "<group>"; };
@@ -2393,6 +2392,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B2602ED42E6F35DA00E54469 /* Environment */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		B2AEB1BE2E69F365002AA42D /* Calculator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -9252,6 +9256,7 @@
 				B2AEB1BE2E69F365002AA42D /* Calculator */,
 				B2AEB2002E6A0726002AA42D /* CalculatorTests */,
 				B2AEB2CE2E6A1184002AA42D /* CalculatorUITests */,
+				B2602ED42E6F35DA00E54469 /* Environment */,
 				B2041F582E6B1F2700EF13FD /* vendor */,
 				B20434E92E6B151E00EF13FD /* Gemfile */,
 				B20434EF2E6B19AC00EF13FD /* Podfile */,
@@ -9259,7 +9264,6 @@
 				B27FB80D2E6B71370057F01C /* .periphery.yml */,
 				B27FB8B42E6C972B0057F01C /* .periphery-version */,
 				B20434E12E6A3C8900EF13FD /* .ruby-version */,
-				B2043B612E6B376900EF13FD /* .swiftlint.yml */,
 				E05A7A8C7140F8E23D924AE0 /* Pods */,
 				FE189011362ED069B69CBEE4 /* Frameworks */,
 				B2043B0D2E6B2D1400EF13FD /* Calculator.app */,
@@ -9495,7 +9499,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFTLINT_PATH=\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\nif [ ! -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[!] SwiftLint is not installed or not found at $SWIFTLINT_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[*] Starting code scan with linter for configuration: $CONFIGURATION.\"\n    \n    \"$SWIFTLINT_PATH\" lint\n    \n    echo \"[*] Scan completed.\"\nfi\n";
+			shellScript = "Environment/SwiftLint/swiftlint.sh\n";
 		};
 		B27FB80C2E6B6BDF0057F01C /* Run Periphery */ = {
 			isa = PBXShellScriptBuildPhase;

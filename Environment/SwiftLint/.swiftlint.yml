@@ -37,13 +37,13 @@ opt_in_rules:
   - vertical_whitespace_closing_braces
 
 included:
-  - Calculator
-  - CalculatorTests
-  - CalculatorUITests
+  - ../../Calculator
+  - ../../CalculatorTests
+  - ../../CalculatorUITests
 
 excluded:
-  - Pods
-  - vendor
+  - ../../Pods
+  - ../../vendor
 
 cyclomatic_complexity:
   ignores_case_statements: true
