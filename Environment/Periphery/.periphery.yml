@@ -1,4 +1,4 @@
-project: Calculator.xcworkspace
+project: ../../Calculator.xcworkspace
 
 schemes:
 - Calculator
