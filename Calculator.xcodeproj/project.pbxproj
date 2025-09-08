@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = B27FB8092E6B6BD80057F01C /* Build configuration list for PBXAggregateTarget "Periphery" */;
 			buildPhases = (
-				B27FB80C2E6B6BDF0057F01C /* Periphery */,
+				B27FB80C2E6B6BDF0057F01C /* Run Periphery */,
 			);
 			dependencies = (
 			);
@@ -2382,6 +2382,11 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				SupportingFiles/Info.plist,
+				SwiftGen/.swiftgen.yml,
+				SwiftGen/Templates/Assets.stencil,
+				SwiftGen/Templates/CoreData.stencil,
+				SwiftGen/Templates/Fonts.stencil,
+				SwiftGen/Templates/Strings.stencil,
 			);
 			target = B2AEB1BB2E69F365002AA42D /* Calculator */;
 		};
@@ -9294,7 +9299,8 @@
 			buildConfigurationList = B2AEB1E82E69F366002AA42D /* Build configuration list for PBXNativeTarget "Calculator" */;
 			buildPhases = (
 				8003C79C5D89B773598AB47A /* [CP] Check Pods Manifest.lock */,
-				B20434E02E6A33EE00EF13FD /* SwiftLint */,
+				B20434E02E6A33EE00EF13FD /* Run SwiftLint */,
+				B27FC9992E6CDFCA0057F01C /* Run SwiftGen */,
 				B2AEB1B82E69F365002AA42D /* Sources */,
 				B2043B092E6B2C6F00EF13FD /* Resources */,
 				B2AEB1B92E69F365002AA42D /* Frameworks */,
@@ -9472,7 +9478,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B20434E02E6A33EE00EF13FD /* SwiftLint */ = {
+		B20434E02E6A33EE00EF13FD /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -9482,16 +9488,16 @@
 			);
 			inputPaths = (
 			);
-			name = SwiftLint;
+			name = "Run SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFTLINT_PATH=\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\nif [ ! -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[!] SwiftLint is not installed or not found at $SWIFTLINT_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[*] Starting scan code with linter for configuration: $CONFIGURATION.\"\n    \n    \"$SWIFTLINT_PATH\" lint\n    \n    echo \"[*] Scan completed.\"\nfi\n";
+			shellScript = "SWIFTLINT_PATH=\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\nif [ ! -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[!] SwiftLint is not installed or not found at $SWIFTLINT_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$SWIFTLINT_PATH\" ]; then\n    echo \"[*] Starting code scan with linter for configuration: $CONFIGURATION.\"\n    \n    \"$SWIFTLINT_PATH\" lint\n    \n    echo \"[*] Scan completed.\"\nfi\n";
 		};
-		B27FB80C2E6B6BDF0057F01C /* Periphery */ = {
+		B27FB80C2E6B6BDF0057F01C /* Run Periphery */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -9501,7 +9507,7 @@
 			);
 			inputPaths = (
 			);
-			name = Periphery;
+			name = "Run Periphery";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -9509,6 +9515,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "PERIPHERY_PATH=\"/opt/homebrew/bin/periphery\"\n\nif [ ! -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[!] Periphery is not installed or not found at $PERIPHERY_PATH. Please install it before running this script.\"\n    exit 1\nfi\n\nif [ -f \"$PERIPHERY_PATH\" ]; then\n    echo \"[*] Starting scan for unused code for configuration: $CONFIGURATION.\"\n\n    PROJECT_DERIVED_PATH=\"${BUILD_ROOT%/Build/*}\"\n    DATA_STORE_PATH=\"$PROJECT_DERIVED_PATH/Index.noindex/DataStore\"\n    \n    \"$PERIPHERY_PATH\" clear-cache\n    \"$PERIPHERY_PATH\" scan --index-store-path $DATA_STORE_PATH --skip-build\n    \n    echo \"[*] Scan completed.\"\nfi\n";
+		};
+		B27FC9992E6CDFCA0057F01C /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Calculator/SupportingFiles/Generated",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Calculator/SwiftGen/swiftgen.sh\n";
 		};
 		C51EF37F0B80875132171F50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
