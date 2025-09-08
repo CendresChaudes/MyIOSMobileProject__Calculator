@@ -43,7 +43,7 @@ fi
 if [ -f "$SWIFTGEN_PATH" ]; then
     echo "[*] Starting code generation for configuration: $CONFIGURATION."
     
-    cd Calculator/SwiftGen/
+    cd Environment/SwiftGen/
     
     if [ ! -f ".swiftgen.yml" ]; then
         echo "[!] Configuration file .swiftgen.yml not found."

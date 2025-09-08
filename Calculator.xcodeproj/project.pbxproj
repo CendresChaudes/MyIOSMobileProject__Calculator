@@ -562,54 +562,54 @@
 		B204167F2E6B1F2700EF13FD /* .document */ = {isa = PBXFileReference; lastKnownFileType = text; path = .document; sourceTree = "<group>"; };
 		B20416802E6B1F2700EF13FD /* bundle.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = bundle.1; sourceTree = "<group>"; };
 		B20416812E6B1F2700EF13FD /* bundle-add.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-add.1"; sourceTree = "<group>"; };
-		B20416822E6B1F2700EF13FD /* bundle-add.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-add.1.ronn"; sourceTree = "<group>"; };
+		B20416822E6B1F2700EF13FD /* bundle-add.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-add.1.ronn"; sourceTree = "<group>"; };
 		B20416832E6B1F2700EF13FD /* bundle-binstubs.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-binstubs.1"; sourceTree = "<group>"; };
-		B20416842E6B1F2700EF13FD /* bundle-binstubs.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-binstubs.1.ronn"; sourceTree = "<group>"; };
+		B20416842E6B1F2700EF13FD /* bundle-binstubs.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-binstubs.1.ronn"; sourceTree = "<group>"; };
 		B20416852E6B1F2700EF13FD /* bundle-cache.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-cache.1"; sourceTree = "<group>"; };
-		B20416862E6B1F2700EF13FD /* bundle-cache.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-cache.1.ronn"; sourceTree = "<group>"; };
+		B20416862E6B1F2700EF13FD /* bundle-cache.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-cache.1.ronn"; sourceTree = "<group>"; };
 		B20416872E6B1F2700EF13FD /* bundle-check.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-check.1"; sourceTree = "<group>"; };
-		B20416882E6B1F2700EF13FD /* bundle-check.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-check.1.ronn"; sourceTree = "<group>"; };
+		B20416882E6B1F2700EF13FD /* bundle-check.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-check.1.ronn"; sourceTree = "<group>"; };
 		B20416892E6B1F2700EF13FD /* bundle-clean.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-clean.1"; sourceTree = "<group>"; };
-		B204168A2E6B1F2700EF13FD /* bundle-clean.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-clean.1.ronn"; sourceTree = "<group>"; };
+		B204168A2E6B1F2700EF13FD /* bundle-clean.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-clean.1.ronn"; sourceTree = "<group>"; };
 		B204168B2E6B1F2700EF13FD /* bundle-config.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-config.1"; sourceTree = "<group>"; };
-		B204168C2E6B1F2700EF13FD /* bundle-config.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-config.1.ronn"; sourceTree = "<group>"; };
+		B204168C2E6B1F2700EF13FD /* bundle-config.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-config.1.ronn"; sourceTree = "<group>"; };
 		B204168D2E6B1F2700EF13FD /* bundle-doctor.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-doctor.1"; sourceTree = "<group>"; };
-		B204168E2E6B1F2700EF13FD /* bundle-doctor.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-doctor.1.ronn"; sourceTree = "<group>"; };
+		B204168E2E6B1F2700EF13FD /* bundle-doctor.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-doctor.1.ronn"; sourceTree = "<group>"; };
 		B204168F2E6B1F2700EF13FD /* bundle-exec.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-exec.1"; sourceTree = "<group>"; };
-		B20416902E6B1F2700EF13FD /* bundle-exec.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-exec.1.ronn"; sourceTree = "<group>"; };
+		B20416902E6B1F2700EF13FD /* bundle-exec.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-exec.1.ronn"; sourceTree = "<group>"; };
 		B20416912E6B1F2700EF13FD /* bundle-gem.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-gem.1"; sourceTree = "<group>"; };
-		B20416922E6B1F2700EF13FD /* bundle-gem.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-gem.1.ronn"; sourceTree = "<group>"; };
+		B20416922E6B1F2700EF13FD /* bundle-gem.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-gem.1.ronn"; sourceTree = "<group>"; };
 		B20416932E6B1F2700EF13FD /* bundle-info.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-info.1"; sourceTree = "<group>"; };
-		B20416942E6B1F2700EF13FD /* bundle-info.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-info.1.ronn"; sourceTree = "<group>"; };
+		B20416942E6B1F2700EF13FD /* bundle-info.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-info.1.ronn"; sourceTree = "<group>"; };
 		B20416952E6B1F2700EF13FD /* bundle-init.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-init.1"; sourceTree = "<group>"; };
-		B20416962E6B1F2700EF13FD /* bundle-init.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-init.1.ronn"; sourceTree = "<group>"; };
+		B20416962E6B1F2700EF13FD /* bundle-init.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-init.1.ronn"; sourceTree = "<group>"; };
 		B20416972E6B1F2700EF13FD /* bundle-inject.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-inject.1"; sourceTree = "<group>"; };
-		B20416982E6B1F2700EF13FD /* bundle-inject.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-inject.1.ronn"; sourceTree = "<group>"; };
+		B20416982E6B1F2700EF13FD /* bundle-inject.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-inject.1.ronn"; sourceTree = "<group>"; };
 		B20416992E6B1F2700EF13FD /* bundle-install.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-install.1"; sourceTree = "<group>"; };
-		B204169A2E6B1F2700EF13FD /* bundle-install.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-install.1.ronn"; sourceTree = "<group>"; };
+		B204169A2E6B1F2700EF13FD /* bundle-install.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-install.1.ronn"; sourceTree = "<group>"; };
 		B204169B2E6B1F2700EF13FD /* bundle-list.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-list.1"; sourceTree = "<group>"; };
-		B204169C2E6B1F2700EF13FD /* bundle-list.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-list.1.ronn"; sourceTree = "<group>"; };
+		B204169C2E6B1F2700EF13FD /* bundle-list.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-list.1.ronn"; sourceTree = "<group>"; };
 		B204169D2E6B1F2700EF13FD /* bundle-lock.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-lock.1"; sourceTree = "<group>"; };
-		B204169E2E6B1F2700EF13FD /* bundle-lock.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-lock.1.ronn"; sourceTree = "<group>"; };
+		B204169E2E6B1F2700EF13FD /* bundle-lock.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-lock.1.ronn"; sourceTree = "<group>"; };
 		B204169F2E6B1F2700EF13FD /* bundle-open.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-open.1"; sourceTree = "<group>"; };
-		B20416A02E6B1F2700EF13FD /* bundle-open.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-open.1.ronn"; sourceTree = "<group>"; };
+		B20416A02E6B1F2700EF13FD /* bundle-open.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-open.1.ronn"; sourceTree = "<group>"; };
 		B20416A12E6B1F2700EF13FD /* bundle-outdated.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-outdated.1"; sourceTree = "<group>"; };
-		B20416A22E6B1F2700EF13FD /* bundle-outdated.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-outdated.1.ronn"; sourceTree = "<group>"; };
+		B20416A22E6B1F2700EF13FD /* bundle-outdated.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-outdated.1.ronn"; sourceTree = "<group>"; };
 		B20416A32E6B1F2700EF13FD /* bundle-platform.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-platform.1"; sourceTree = "<group>"; };
-		B20416A42E6B1F2700EF13FD /* bundle-platform.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-platform.1.ronn"; sourceTree = "<group>"; };
+		B20416A42E6B1F2700EF13FD /* bundle-platform.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-platform.1.ronn"; sourceTree = "<group>"; };
 		B20416A52E6B1F2700EF13FD /* bundle-pristine.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-pristine.1"; sourceTree = "<group>"; };
-		B20416A62E6B1F2700EF13FD /* bundle-pristine.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-pristine.1.ronn"; sourceTree = "<group>"; };
+		B20416A62E6B1F2700EF13FD /* bundle-pristine.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-pristine.1.ronn"; sourceTree = "<group>"; };
 		B20416A72E6B1F2700EF13FD /* bundle-remove.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-remove.1"; sourceTree = "<group>"; };
-		B20416A82E6B1F2700EF13FD /* bundle-remove.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-remove.1.ronn"; sourceTree = "<group>"; };
+		B20416A82E6B1F2700EF13FD /* bundle-remove.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-remove.1.ronn"; sourceTree = "<group>"; };
 		B20416A92E6B1F2700EF13FD /* bundle-show.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-show.1"; sourceTree = "<group>"; };
-		B20416AA2E6B1F2700EF13FD /* bundle-show.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-show.1.ronn"; sourceTree = "<group>"; };
+		B20416AA2E6B1F2700EF13FD /* bundle-show.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-show.1.ronn"; sourceTree = "<group>"; };
 		B20416AB2E6B1F2700EF13FD /* bundle-update.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-update.1"; sourceTree = "<group>"; };
-		B20416AC2E6B1F2700EF13FD /* bundle-update.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-update.1.ronn"; sourceTree = "<group>"; };
+		B20416AC2E6B1F2700EF13FD /* bundle-update.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-update.1.ronn"; sourceTree = "<group>"; };
 		B20416AD2E6B1F2700EF13FD /* bundle-viz.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "bundle-viz.1"; sourceTree = "<group>"; };
-		B20416AE2E6B1F2700EF13FD /* bundle-viz.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundle-viz.1.ronn"; sourceTree = "<group>"; };
-		B20416AF2E6B1F2700EF13FD /* bundle.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = bundle.1.ronn; sourceTree = "<group>"; };
-		B20416B02E6B1F2700EF13FD /* gemfile.5 */ = {isa = PBXFileReference; lastKnownFileType = text; path = gemfile.5; sourceTree = "<group>"; };
-		B20416B12E6B1F2700EF13FD /* gemfile.5.ronn */ = {isa = PBXFileReference; lastKnownFileType = text; path = gemfile.5.ronn; sourceTree = "<group>"; };
+		B20416AE2E6B1F2700EF13FD /* bundle-viz.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundle-viz.1.ronn"; sourceTree = "<group>"; };
+		B20416AF2E6B1F2700EF13FD /* bundle.1.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = bundle.1.ronn; sourceTree = "<group>"; };
+		B20416B02E6B1F2700EF13FD /* gemfile.5 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gemfile.5; sourceTree = "<group>"; };
+		B20416B12E6B1F2700EF13FD /* gemfile.5.ronn */ = {isa = PBXFileReference; lastKnownFileType = file; path = gemfile.5.ronn; sourceTree = "<group>"; };
 		B20416B22E6B1F2700EF13FD /* index.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = index.txt; sourceTree = "<group>"; };
 		B20416B42E6B1F2700EF13FD /* source.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = source.rb; sourceTree = "<group>"; };
 		B20416B62E6B1F2700EF13FD /* git.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = git.rb; sourceTree = "<group>"; };
@@ -631,40 +631,40 @@
 		B20416CD2E6B1F2700EF13FD /* path.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = path.rb; sourceTree = "<group>"; };
 		B20416CE2E6B1F2700EF13FD /* rubygems.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rubygems.rb; sourceTree = "<group>"; };
 		B20416CF2E6B1F2700EF13FD /* rubygems_aggregate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rubygems_aggregate.rb; sourceTree = "<group>"; };
-		B20416D12E6B1F2700EF13FD /* console.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = console.tt; sourceTree = "<group>"; };
-		B20416D22E6B1F2700EF13FD /* setup.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = setup.tt; sourceTree = "<group>"; };
-		B20416D42E6B1F2700EF13FD /* config.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.yml.tt; sourceTree = "<group>"; };
-		B20416D62E6B1F2700EF13FD /* newgem.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.tt; sourceTree = "<group>"; };
-		B20416D82E6B1F2700EF13FD /* extconf.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = extconf.rb.tt; sourceTree = "<group>"; };
-		B20416D92E6B1F2700EF13FD /* newgem.c.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.c.tt; sourceTree = "<group>"; };
-		B20416DA2E6B1F2700EF13FD /* newgem.h.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.h.tt; sourceTree = "<group>"; };
-		B20416DD2E6B1F2700EF13FD /* main.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.yml.tt; sourceTree = "<group>"; };
-		B20416E02E6B1F2700EF13FD /* version.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = version.rb.tt; sourceTree = "<group>"; };
-		B20416E22E6B1F2700EF13FD /* newgem.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.rb.tt; sourceTree = "<group>"; };
-		B20416E42E6B1F2700EF13FD /* newgem.rbs.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.rbs.tt; sourceTree = "<group>"; };
-		B20416E62E6B1F2700EF13FD /* newgem_spec.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem_spec.rb.tt; sourceTree = "<group>"; };
-		B20416E72E6B1F2700EF13FD /* spec_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = spec_helper.rb.tt; sourceTree = "<group>"; };
-		B20416E92E6B1F2700EF13FD /* test_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_helper.rb.tt; sourceTree = "<group>"; };
-		B20416EA2E6B1F2700EF13FD /* test_newgem.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_newgem.rb.tt; sourceTree = "<group>"; };
-		B20416EC2E6B1F2700EF13FD /* newgem_test.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem_test.rb.tt; sourceTree = "<group>"; };
-		B20416ED2E6B1F2700EF13FD /* test_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_helper.rb.tt; sourceTree = "<group>"; };
-		B20416F02E6B1F2700EF13FD /* CHANGELOG.md.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGELOG.md.tt; sourceTree = "<group>"; };
-		B20416F12E6B1F2700EF13FD /* CODE_OF_CONDUCT.md.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CODE_OF_CONDUCT.md.tt; sourceTree = "<group>"; };
-		B20416F22E6B1F2700EF13FD /* Gemfile.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.tt; sourceTree = "<group>"; };
-		B20416F32E6B1F2700EF13FD /* gitignore.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = gitignore.tt; sourceTree = "<group>"; };
-		B20416F42E6B1F2700EF13FD /* gitlab-ci.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "gitlab-ci.yml.tt"; sourceTree = "<group>"; };
-		B20416F52E6B1F2700EF13FD /* LICENSE.txt.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt.tt; sourceTree = "<group>"; };
-		B20416F62E6B1F2700EF13FD /* newgem.gemspec.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = newgem.gemspec.tt; sourceTree = "<group>"; };
-		B20416F72E6B1F2700EF13FD /* Rakefile.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile.tt; sourceTree = "<group>"; };
-		B20416F82E6B1F2700EF13FD /* README.md.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md.tt; sourceTree = "<group>"; };
-		B20416F92E6B1F2700EF13FD /* rspec.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rspec.tt; sourceTree = "<group>"; };
-		B20416FA2E6B1F2700EF13FD /* rubocop.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = rubocop.yml.tt; sourceTree = "<group>"; };
-		B20416FB2E6B1F2700EF13FD /* standard.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = standard.yml.tt; sourceTree = "<group>"; };
-		B20416FC2E6B1F2700EF13FD /* travis.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = text; path = travis.yml.tt; sourceTree = "<group>"; };
+		B20416D12E6B1F2700EF13FD /* console.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = console.tt; sourceTree = "<group>"; };
+		B20416D22E6B1F2700EF13FD /* setup.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = setup.tt; sourceTree = "<group>"; };
+		B20416D42E6B1F2700EF13FD /* config.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = config.yml.tt; sourceTree = "<group>"; };
+		B20416D62E6B1F2700EF13FD /* newgem.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.tt; sourceTree = "<group>"; };
+		B20416D82E6B1F2700EF13FD /* extconf.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = extconf.rb.tt; sourceTree = "<group>"; };
+		B20416D92E6B1F2700EF13FD /* newgem.c.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.c.tt; sourceTree = "<group>"; };
+		B20416DA2E6B1F2700EF13FD /* newgem.h.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.h.tt; sourceTree = "<group>"; };
+		B20416DD2E6B1F2700EF13FD /* main.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.yml.tt; sourceTree = "<group>"; };
+		B20416E02E6B1F2700EF13FD /* version.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = version.rb.tt; sourceTree = "<group>"; };
+		B20416E22E6B1F2700EF13FD /* newgem.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.rb.tt; sourceTree = "<group>"; };
+		B20416E42E6B1F2700EF13FD /* newgem.rbs.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.rbs.tt; sourceTree = "<group>"; };
+		B20416E62E6B1F2700EF13FD /* newgem_spec.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem_spec.rb.tt; sourceTree = "<group>"; };
+		B20416E72E6B1F2700EF13FD /* spec_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = spec_helper.rb.tt; sourceTree = "<group>"; };
+		B20416E92E6B1F2700EF13FD /* test_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_helper.rb.tt; sourceTree = "<group>"; };
+		B20416EA2E6B1F2700EF13FD /* test_newgem.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_newgem.rb.tt; sourceTree = "<group>"; };
+		B20416EC2E6B1F2700EF13FD /* newgem_test.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem_test.rb.tt; sourceTree = "<group>"; };
+		B20416ED2E6B1F2700EF13FD /* test_helper.rb.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_helper.rb.tt; sourceTree = "<group>"; };
+		B20416F02E6B1F2700EF13FD /* CHANGELOG.md.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHANGELOG.md.tt; sourceTree = "<group>"; };
+		B20416F12E6B1F2700EF13FD /* CODE_OF_CONDUCT.md.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = CODE_OF_CONDUCT.md.tt; sourceTree = "<group>"; };
+		B20416F22E6B1F2700EF13FD /* Gemfile.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gemfile.tt; sourceTree = "<group>"; };
+		B20416F32E6B1F2700EF13FD /* gitignore.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = gitignore.tt; sourceTree = "<group>"; };
+		B20416F42E6B1F2700EF13FD /* gitlab-ci.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gitlab-ci.yml.tt"; sourceTree = "<group>"; };
+		B20416F52E6B1F2700EF13FD /* LICENSE.txt.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = LICENSE.txt.tt; sourceTree = "<group>"; };
+		B20416F62E6B1F2700EF13FD /* newgem.gemspec.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = newgem.gemspec.tt; sourceTree = "<group>"; };
+		B20416F72E6B1F2700EF13FD /* Rakefile.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rakefile.tt; sourceTree = "<group>"; };
+		B20416F82E6B1F2700EF13FD /* README.md.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.md.tt; sourceTree = "<group>"; };
+		B20416F92E6B1F2700EF13FD /* rspec.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = rspec.tt; sourceTree = "<group>"; };
+		B20416FA2E6B1F2700EF13FD /* rubocop.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubocop.yml.tt; sourceTree = "<group>"; };
+		B20416FB2E6B1F2700EF13FD /* standard.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = standard.yml.tt; sourceTree = "<group>"; };
+		B20416FC2E6B1F2700EF13FD /* travis.yml.tt */ = {isa = PBXFileReference; lastKnownFileType = file; path = travis.yml.tt; sourceTree = "<group>"; };
 		B20416FE2E6B1F2700EF13FD /* .document */ = {isa = PBXFileReference; lastKnownFileType = text; path = .document; sourceTree = "<group>"; };
 		B20416FF2E6B1F2700EF13FD /* Executable */ = {isa = PBXFileReference; lastKnownFileType = text; path = Executable; sourceTree = "<group>"; };
-		B20417002E6B1F2700EF13FD /* Executable.bundler */ = {isa = PBXFileReference; lastKnownFileType = text; path = Executable.bundler; sourceTree = "<group>"; };
-		B20417012E6B1F2700EF13FD /* Executable.standalone */ = {isa = PBXFileReference; lastKnownFileType = text; path = Executable.standalone; sourceTree = "<group>"; };
+		B20417002E6B1F2700EF13FD /* Executable.bundler */ = {isa = PBXFileReference; lastKnownFileType = file; path = Executable.bundler; sourceTree = "<group>"; };
+		B20417012E6B1F2700EF13FD /* Executable.standalone */ = {isa = PBXFileReference; lastKnownFileType = file; path = Executable.standalone; sourceTree = "<group>"; };
 		B20417022E6B1F2700EF13FD /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		B20417032E6B1F2700EF13FD /* gems.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = gems.rb; sourceTree = "<group>"; };
 		B20417052E6B1F2700EF13FD /* rg_proxy.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rg_proxy.rb; sourceTree = "<group>"; };
@@ -702,7 +702,7 @@
 		B20417312E6B1F2700EF13FD /* pool.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = pool.rb; sourceTree = "<group>"; };
 		B20417322E6B1F2700EF13FD /* timed_stack_multi.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = timed_stack_multi.rb; sourceTree = "<group>"; };
 		B20417342E6B1F2700EF13FD /* persistent.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = persistent.rb; sourceTree = "<group>"; };
-		B20417382E6B1F2700EF13FD /* README.rdoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.rdoc; sourceTree = "<group>"; };
+		B20417382E6B1F2700EF13FD /* README.rdoc */ = {isa = PBXFileReference; lastKnownFileType = file; path = README.rdoc; sourceTree = "<group>"; };
 		B204173A2E6B1F2700EF13FD /* create_file.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = create_file.rb; sourceTree = "<group>"; };
 		B204173B2E6B1F2700EF13FD /* create_link.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = create_link.rb; sourceTree = "<group>"; };
 		B204173C2E6B1F2700EF13FD /* directory.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = directory.rb; sourceTree = "<group>"; };
@@ -826,7 +826,7 @@
 		B20417C22E6B1F2700EF13FD /* worker.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = worker.rb; sourceTree = "<group>"; };
 		B20417C32E6B1F2700EF13FD /* yaml_serializer.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = yaml_serializer.rb; sourceTree = "<group>"; };
 		B20417C52E6B1F2700EF13FD /* bundler.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = bundler.rb; sourceTree = "<group>"; };
-		B20417C72E6B1F2700EF13FD /* bundler.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = bundler.gemspec; sourceTree = "<group>"; };
+		B20417C72E6B1F2700EF13FD /* bundler.gemspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = bundler.gemspec; sourceTree = "<group>"; };
 		B20417C82E6B1F2700EF13FD /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B20417C92E6B1F2700EF13FD /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B20417CA2E6B1F2700EF13FD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -2322,7 +2322,7 @@
 		B2041F2A2E6B1F2700EF13FD /* base64-0.3.0.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "base64-0.3.0.gemspec"; sourceTree = "<group>"; };
 		B2041F2B2E6B1F2700EF13FD /* benchmark-0.4.1.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "benchmark-0.4.1.gemspec"; sourceTree = "<group>"; };
 		B2041F2C2E6B1F2700EF13FD /* bigdecimal-3.2.3.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bigdecimal-3.2.3.gemspec"; sourceTree = "<group>"; };
-		B2041F2D2E6B1F2700EF13FD /* bundler-2.3.7.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "bundler-2.3.7.gemspec"; sourceTree = "<group>"; };
+		B2041F2D2E6B1F2700EF13FD /* bundler-2.3.7.gemspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bundler-2.3.7.gemspec"; sourceTree = "<group>"; };
 		B2041F2E2E6B1F2700EF13FD /* CFPropertyList-3.0.7.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CFPropertyList-3.0.7.gemspec"; sourceTree = "<group>"; };
 		B2041F2F2E6B1F2700EF13FD /* claide-1.1.0.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "claide-1.1.0.gemspec"; sourceTree = "<group>"; };
 		B2041F302E6B1F2700EF13FD /* cocoapods-1.16.2.gemspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "cocoapods-1.16.2.gemspec"; sourceTree = "<group>"; };
@@ -2379,11 +2379,13 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				SupportingFiles/Info.plist,
-				SwiftGen/.swiftgen.yml,
-				SwiftGen/Templates/Assets.stencil,
-				SwiftGen/Templates/CoreData.stencil,
-				SwiftGen/Templates/Fonts.stencil,
-				SwiftGen/Templates/Strings.stencil,
+			);
+			target = B2AEB1BB2E69F365002AA42D /* Calculator */;
+		};
+		B2603DC32E6F464800E54469 /* Exceptions for "Environment" folder in "Calculator" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SwiftGen/swiftgen.sh,
 			);
 			target = B2AEB1BB2E69F365002AA42D /* Calculator */;
 		};
@@ -2392,6 +2394,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B2602ED42E6F35DA00E54469 /* Environment */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B2603DC32E6F464800E54469 /* Exceptions for "Environment" folder in "Calculator" target */,
+			);
 			path = Environment;
 			sourceTree = "<group>";
 		};
@@ -9255,11 +9260,11 @@
 				B2AEB2002E6A0726002AA42D /* CalculatorTests */,
 				B2AEB2CE2E6A1184002AA42D /* CalculatorUITests */,
 				B2602ED42E6F35DA00E54469 /* Environment */,
-				B2041F582E6B1F2700EF13FD /* vendor */,
 				B20434E92E6B151E00EF13FD /* Gemfile */,
 				B20434EF2E6B19AC00EF13FD /* Podfile */,
 				B204593A2E6B1B4E00EF13FD /* .gitignore */,
 				B20434E12E6A3C8900EF13FD /* .ruby-version */,
+				B2041F582E6B1F2700EF13FD /* vendor */,
 				E05A7A8C7140F8E23D924AE0 /* Pods */,
 				FE189011362ED069B69CBEE4 /* Frameworks */,
 				B2043B0D2E6B2D1400EF13FD /* Calculator.app */,
@@ -9534,7 +9539,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Calculator/SwiftGen/swiftgen.sh\n";
+			shellScript = "Environment/SwiftGen/swiftgen.sh\n";
 		};
 		C51EF37F0B80875132171F50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
