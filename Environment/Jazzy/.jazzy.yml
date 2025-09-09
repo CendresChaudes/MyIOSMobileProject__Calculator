@@ -2,9 +2,8 @@ author: "Roman Pronin"
 module: Calculator
 module_version: 1.0.0
 
-include:
-  - Calculator/**
-output: docs
+include: ../../Calculator/**
+output: ../../Docs
 
 clean: true
 min_acl: internal
