@@ -21,7 +21,7 @@ if [ -f "$PERIPHERY_PATH" ]; then
     fi
     
     "$PERIPHERY_PATH" clear-cache
-    "$PERIPHERY_PATH" scan --index-store-path $DATA_STORE_PATH --skip-build
+    "$PERIPHERY_PATH" scan --index-exclude "../../Derived/**" --index-store-path $DATA_STORE_PATH --skip-build
     
 	if [ $? -ne 0 ]; then
         echo "[!] Periphery encountered an error during scanning."

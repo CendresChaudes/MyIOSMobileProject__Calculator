@@ -42,6 +42,7 @@ included:
   - ../../CalculatorUITests
 
 excluded:
+  - ../../Derived
   - ../../Pods
   - ../../vendor
 
