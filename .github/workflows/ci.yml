@@ -1,0 +1,40 @@
+name: iOS app CI
+
+on:
+  push:
+    paths:
+      - .github/workflows/**
+      - "**/*.swift"
+      
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+  
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Check Xcode version
+        run: /usr/bin/xcodebuild -version
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+      - name: Install Bundler
+        run: gem install bundler -v 2.7.1
+      - name: Install gems
+        run: bundler install
+      - name: Install pods
+        run: bundler exec pod install
+      - name: Install iOS Simulator
+        run: xcodebuild -downloadPlatform iOS -buildVersion 16.0
+      - name: Build app
+        run: xcodebuild build-for-testing -workspace Calculator.xcworkspace -scheme
+          Calculator -destination "platform=iOS Simulator,name=iPhone 14 Pro
+          Max,OS=16.0"
+      - name: Run tests
+        run: xcodebuild test-without-building -workspace Calculator.xcworkspace -scheme
+          Calculator -destination "platform=iOS Simulator,name=iPhone 14 Pro
+          Max,OS=16.0"
