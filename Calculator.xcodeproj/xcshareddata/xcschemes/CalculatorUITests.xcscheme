@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0FCB1E17D18209A9253154B"
-               BuildableName = "CalculatorTests.xctest"
-               BlueprintName = "CalculatorTests"
+               BlueprintIdentifier = "FFE9B8CA0BBA627BC0C4DC30"
+               BuildableName = "CalculatorUITests.xctest"
+               BlueprintName = "CalculatorUITests"
                ReferencedContainer = "container:Calculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,9 +33,9 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0FCB1E17D18209A9253154B"
-               BuildableName = "CalculatorTests.xctest"
-               BlueprintName = "CalculatorTests"
+               BlueprintIdentifier = "FFE9B8CA0BBA627BC0C4DC30"
+               BuildableName = "CalculatorUITests.xctest"
+               BlueprintName = "CalculatorUITests"
                ReferencedContainer = "container:Calculator.xcodeproj">
             </BuildableReference>
          </TestableReference>

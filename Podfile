@@ -3,7 +3,6 @@ platform :ios, '15.6'
 use_frameworks!
 
 target 'Calculator' do
-	pod 'SwiftGen', '6.6.3'
 	pod 'SwiftLint', '0.59.1'
 
 	target 'CalculatorTests' do

@@ -6,8 +6,19 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
 ## User settings
 xcuserdata/
+
+### Projects ###
+*.xcodeproj
+*.xcworkspace
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -46,7 +57,12 @@ playground.xcworkspace
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 Pods/
 vendor/
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-*.xcworkspace
+
+### Tuist derived files ###
+graph.dot
+Derived/
+
+### Tuist managed dependencies ###
+Tuist/.build
 
 # End of https://www.toptal.com/developers/gitignore/api/swift
