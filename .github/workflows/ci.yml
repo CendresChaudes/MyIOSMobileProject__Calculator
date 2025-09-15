@@ -26,15 +26,9 @@ jobs:
         run: gem install bundler -v 2.7.1
       - name: Install gems
         run: bundler install
-      - name: Install pods
-        run: bundler exec pod install
       - name: Install iOS Simulator
         run: xcodebuild -downloadPlatform iOS -buildVersion 16.0
       - name: Build app
-        run: xcodebuild build-for-testing -workspace Calculator.xcworkspace -scheme
-          Calculator -destination "platform=iOS Simulator,name=iPhone 14 Pro
-          Max,OS=16.0"
+        run: .github/build.sh
       - name: Run tests
-        run: xcodebuild test-without-building -workspace Calculator.xcworkspace -scheme
-          Calculator -destination "platform=iOS Simulator,name=iPhone 14 Pro
-          Max,OS=16.0"
+        run: .github/test.sh
