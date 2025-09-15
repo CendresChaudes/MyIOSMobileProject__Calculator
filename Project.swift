@@ -22,11 +22,10 @@ let targets: [Target] = [
 		bundleId: "dev.CendresChaudes.Calculator",
 		deploymentTargets: .iOS(IOS_DEPLOYMENT_TARGET_VERSION),
 		infoPlist: "Calculator/Support/Info.plist",
-		sources: "Calculator/Sources/**",
+		sources: ["Calculator/Sources/**"],
 		resources: [
 			"Calculator/Resources/**",
 			"Environment/**",
-			"Tuist/**",
 			".github/**",
 			".gitignore",
 			".ruby-version",
@@ -36,7 +35,6 @@ let targets: [Target] = [
 			"Makefile",
 			"Podfile",
 			"Podfile.lock",
-			"Project.swift",
 		],
 		scripts: [swiftLintScript],
 		dependencies: [],
@@ -102,17 +100,31 @@ let schemes: [Scheme] = [
 ]
 
 let settings: Settings = .settings(
+	base: SettingsDictionary()
+		.currentProjectVersion("1")
+		.marketingVersion("1")
+		.automaticCodeSigning(devTeam: "S9449RGK8C"),
 	configurations: [
 		.debug(name: "Debug"),
 		.release(name: "Release"),
 	]
 )
 
+let options: Project.Options = .options(
+	textSettings: .textSettings(
+		usesTabs: false,
+		indentWidth: 4,
+		tabWidth: 4,
+		wrapsLines: true
+	)
+)
+
 let project = Project(
 	name: "Calculator",
-	organizationName: "CendresChaudes",
+	organizationName: "Роман Пронин (Personal Team)",
+	options: options,
 	settings: settings,
 	targets: targets,
 	schemes: schemes,
-	resourceSynthesizers: [.assets(), .coreData(), .fonts(), .strings()]
+	resourceSynthesizers: [.assets(), .coreData(), .fonts(), .strings()],
 )
