@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+    <key>CFBundleName</key>
+    <string>Calculator</string> 
+    <key>CFBundleDisplayName</key>
+    <string>Calculator</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen.storyboard</string>
 	<key>CFBundleExecutable</key>
