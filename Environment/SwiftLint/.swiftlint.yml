@@ -104,7 +104,19 @@ multiline_literal_brackets: error
 multiline_function_chains: error
 
 modifier_order:
-  preferred_modifier_order: [acl, setterACL, override, dynamic, mutators, lazy, final, required, convenience, typeMethods, owned]
+  preferred_modifier_order: [
+  acl,
+  setterACL,
+  override,
+  dynamic,
+  mutators,
+  lazy,
+  final,
+  required,
+  convenience,
+  typeMethods,
+  owned
+]
 
 custom_rules:
   rus_characters:
@@ -166,6 +178,7 @@ type_name:
   allowed_symbols: ["_"]
 
 identifier_name:
+  allowed_symbols: ["_"]
   min_length:
     error: 2
   excluded:
@@ -176,6 +189,9 @@ identifier_name:
 
 nesting:
   type_level: 4
+  
+force_cast:
+  severity: warning
 
 # variants: (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
 reporter: "xcode"
