@@ -11,6 +11,7 @@ import UIKit
 final class Button: UIButton {
 
     enum Variant {
+
         case primary
         case secondary
         case accent
@@ -23,8 +24,11 @@ final class Button: UIButton {
     convenience init(title: String, variant: Variant) {
         self.init(frame: .zero)
         self.setTitle(title, for: .normal)
-        self.titleLabel?.font = UIFont(font: FontFamily.Montserrat.regular, size: 24)
+        self.titleLabel?.font = UIFont(font: FontFamily.Montserrat.regular, size: 28)
         setTitleColor(Asset.text.color, for: .normal)
+        layer.cornerRadius = 18
+        contentHorizontalAlignment = .center
+        translatesAutoresizingMaskIntoConstraints = false
 
         switch variant {
         case .primary:
@@ -38,7 +42,6 @@ final class Button: UIButton {
 
     private override init(frame: CGRect) {
         super.init(frame: frame)
-        configureCommonParams()
     }
 
     private func configureCommonParams() {
@@ -57,5 +60,6 @@ final class Button: UIButton {
 
     private func configureAccentVariant() {
         backgroundColor = Asset.accent.color
+        self.titleLabel?.font = UIFont(font: FontFamily.Montserrat.regular, size: 36)
     }
 }
