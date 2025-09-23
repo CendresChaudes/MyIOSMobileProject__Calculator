@@ -16,7 +16,7 @@ enum MainAssembly: IAssembly {
         let presenter = MainPresenter(
             dependencies: .init(
                 model: CalculatorButton(),
-                view: MainViewController()
+                view: controller
             )
         )
 

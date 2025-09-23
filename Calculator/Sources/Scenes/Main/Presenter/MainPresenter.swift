@@ -11,12 +11,15 @@ import UIKit
 protocol IMainPresenter {
 
     var buttons: [CalculatorButton.Button] { get }
+    func updateDisplay(with text: String)
 }
 
 final class MainPresenter {
 
     private let model: ICalculatorButton
     private unowned let view: IMainViewController
+
+    private var displayText = ""
 
     struct Dependencies {
 
@@ -36,5 +39,10 @@ extension MainPresenter: IMainPresenter {
 
     var buttons: [CalculatorButton.Button] {
         model.buttons
+    }
+
+    func updateDisplay(with text: String) {
+        displayText += text
+        view.setDisplay(text: displayText)
     }
 }
