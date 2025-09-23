@@ -24,6 +24,7 @@ final class Button: UIButton {
         self.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.titleLabel?.font = UIFont(font: FontFamily.Montserrat.regular, size: 24)
+        setTitleColor(Asset.text.color, for: .normal)
 
         switch variant {
         case .primary:
