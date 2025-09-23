@@ -27,7 +27,7 @@ final class Container: UIView {
             self.topAnchor.constraint(equalTo: view.topAnchor, constant: VERTICAL_PADDING),
             self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -VERTICAL_PADDING),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HORIZONTAL_PADDING),
-            self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HORIZONTAL_PADDING)
+            self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HORIZONTAL_PADDING),
         ])
     }
 }

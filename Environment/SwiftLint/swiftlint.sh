@@ -18,7 +18,7 @@ if [ -f "$SWIFTLINT_PATH" ]; then
     fi
 
     "$SWIFTLINT_PATH" lint --config .swiftlint.yml
-	"$SWIFTLINT_PATH" --config .swiftlint.yml --fix
+	"$SWIFTLINT_PATH" lint --config .swiftlint.yml --fix
         
     if [ $? -ne 0 ]; then
         echo "[!] SwiftLint encountered an error during scanning."

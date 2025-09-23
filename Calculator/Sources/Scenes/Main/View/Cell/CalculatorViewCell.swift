@@ -43,7 +43,7 @@ final class CalculatorViewCell: UICollectionViewCell {
             button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             button.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            button.heightAnchor.constraint(equalTo: contentView.heightAnchor)
+            button.heightAnchor.constraint(equalTo: contentView.heightAnchor),
         ])
     }
 }

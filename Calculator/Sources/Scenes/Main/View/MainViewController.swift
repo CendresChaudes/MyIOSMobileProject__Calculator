@@ -81,7 +81,7 @@ final class MainViewController: UIViewController, IMainViewController {
             keyboardHeightConstraint,
             keyboard.bottomAnchor.constraint(equalTo: container.bottomAnchor),
             keyboard.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            keyboard.trailingAnchor.constraint(equalTo: container.trailingAnchor)
+            keyboard.trailingAnchor.constraint(equalTo: container.trailingAnchor),
         ])
     }
 

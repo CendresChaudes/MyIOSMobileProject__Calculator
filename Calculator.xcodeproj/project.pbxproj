@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -120,27 +120,27 @@
 		008D2E7766938636126B4FFB /* Periphery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Periphery-Info.plist"; sourceTree = "<group>"; };
 		054D9F5C65ADD9A7CD80005F /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 		0DE86A10997465615C629654 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
-		11C0F2D2900B62462B27E9F4 /* Makefile */ = {isa = PBXFileReference; path = Makefile; sourceTree = "<group>"; };
+		11C0F2D2900B62462B27E9F4 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		137EAAEF856DD46E06375864 /* .jazzy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yml; sourceTree = "<group>"; };
 		15B5061F7921DB2D49061BA0 /* TuistStrings+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+Calculator.swift"; sourceTree = "<group>"; };
 		1660128BE1DFC156C2CE074F /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
-		16F9D09B507ABBCB8C9D34D0 /* .periphery-version */ = {isa = PBXFileReference; path = ".periphery-version"; sourceTree = "<group>"; };
+		16F9D09B507ABBCB8C9D34D0 /* .periphery-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".periphery-version"; sourceTree = "<group>"; };
 		2212CE7037F265F7134795B3 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2358BA040A12F3DE4EB21A3B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2EFB2CC837E0A4773E32C372 /* Pods-Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator.debug.xcconfig"; path = "Target Support Files/Pods-Calculator/Pods-Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		31330C739008E86BE8FEAF94 /* .periphery.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .periphery.yml; sourceTree = "<group>"; };
 		349B8C502022034706FE262C /* Pods-Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator.release.xcconfig"; path = "Target Support Files/Pods-Calculator/Pods-Calculator.release.xcconfig"; sourceTree = "<group>"; };
-		397D417D9CAFFFBE7AAC4D93 /* Gemfile.lock */ = {isa = PBXFileReference; path = Gemfile.lock; sourceTree = "<group>"; };
+		397D417D9CAFFFBE7AAC4D93 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		3A30841D8B877A4B4BF3E359 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		41B19BB322306D231942D77A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		42B1C5F2156AD75E3EDB1340 /* Pods_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A699AB2CE57281E74CEF0E /* periphery.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = periphery.sh; sourceTree = "<group>"; };
-		463236F1C51DE311386298AB /* Periphery */ = {isa = PBXFileReference; includeInIndex = 0; path = Periphery; sourceTree = BUILT_PRODUCTS_DIR; };
+		463236F1C51DE311386298AB /* Periphery */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Periphery; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FAECFEFB5AD83C24F1FADE /* swiftlint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swiftlint.sh; sourceTree = "<group>"; };
 		47E08F048731259C0344D63C /* Pods-CalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-CalculatorUITests/Pods-CalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DD80692E7443E1244D1FD2E /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEFDAC78C5033A1ED8745B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		5615B268B4FD069033442731 /* Gemfile */ = {isa = PBXFileReference; path = Gemfile; sourceTree = "<group>"; };
+		5615B268B4FD069033442731 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		56F33A21F7083E695B6AF187 /* TuistBundle+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+Calculator.swift"; sourceTree = "<group>"; };
 		5CDD4B95D660ED77F07F2BD2 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		622BAEB47C5A202166B44AE0 /* ci.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ci.yml; sourceTree = "<group>"; };
@@ -152,19 +152,19 @@
 		6DEEAD884BFC9B472DEB059B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6EFBF5AD1D3EF56FC1D5E03B /* Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calculator.xcdatamodel; sourceTree = "<group>"; };
 		74CA8942E6A873CDDB2DF774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74E6E2961379CEC0C564EB4B /* README.TXT */ = {isa = PBXFileReference; path = README.TXT; sourceTree = "<group>"; };
+		74E6E2961379CEC0C564EB4B /* README.TXT */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
 		76E0596D8A60B28F138FC58B /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		80DB67B4DD162CD24AA85975 /* Pods-CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-CalculatorUITests/Pods-CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9235F95E5EB1601508BE6955 /* .ruby-version */ = {isa = PBXFileReference; path = ".ruby-version"; sourceTree = "<group>"; };
-		9562822FD70382487A6137F0 /* Podfile */ = {isa = PBXFileReference; path = Podfile; sourceTree = "<group>"; };
+		9235F95E5EB1601508BE6955 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
+		9562822FD70382487A6137F0 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		99CC8F10E383C0D900EAEF77 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		9CA18520011122D3DE1B65F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0524ACD6897BAAE795582EE /* Pods_CalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A739E23AF69A45AAE7A4C82D /* .gitignore */ = {isa = PBXFileReference; path = .gitignore; sourceTree = "<group>"; };
+		A739E23AF69A45AAE7A4C82D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AE6EB719B0D9B1EEF172084C /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		B1CE0BC9672B944D99626554 /* .tuist-version */ = {isa = PBXFileReference; path = ".tuist-version"; sourceTree = "<group>"; };
+		B1CE0BC9672B944D99626554 /* .tuist-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".tuist-version"; sourceTree = "<group>"; };
 		B62359B6448F86584F91F6E7 /* TuistFonts+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+Calculator.swift"; sourceTree = "<group>"; };
-		C244163083705B8C78354318 /* Podfile.lock */ = {isa = PBXFileReference; path = Podfile.lock; sourceTree = "<group>"; };
+		C244163083705B8C78354318 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		C3CAD04EA9B3316E630437E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4BC309F3672A8879B5D9E31 /* CalculatorUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CalculatorUITests-Info.plist"; sourceTree = "<group>"; };
 		CA011FE76D047AA15F20550C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -549,7 +549,6 @@
 				47E08F048731259C0344D63C /* Pods-CalculatorUITests.debug.xcconfig */,
 				80DB67B4DD162CD24AA85975 /* Pods-CalculatorUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -840,7 +839,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = Environment/SwiftLint/swiftlint.sh;
+			shellScript = "Environment/SwiftLint/swiftlint.sh\n";
 		};
 		8D115D6FFD3540F4CDAA0407 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

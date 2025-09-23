@@ -59,6 +59,9 @@ missing_docs:
     
 trailing_semicolon: error
 
+trailing_comma: 
+  mandatory_comma: true
+
 empty_count:
   only_after_dot: true
   
