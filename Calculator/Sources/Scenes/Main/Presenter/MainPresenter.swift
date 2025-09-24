@@ -11,7 +11,7 @@ import UIKit
 protocol IMainPresenter {
 
     var buttons: [CalculatorButton.Button] { get }
-    func updateDisplay(with text: String)
+    func handleNumberButton(with number: Int)
 }
 
 final class MainPresenter {
@@ -41,8 +41,12 @@ extension MainPresenter: IMainPresenter {
         model.buttons
     }
 
-    func updateDisplay(with text: String) {
-        displayText += text
+    func handleNumberButton(with number: Int) {
+        let number = String(number)
+        displayText += number
+        updateDisplay(with: number)
+    }
+    private func updateDisplay(with text: String) {
         view.setDisplay(text: displayText)
     }
 }

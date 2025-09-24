@@ -182,7 +182,21 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         didSelectItemAt indexPath: IndexPath
     ) {
         let button = presenter.buttons[indexPath.item]
-        presenter.updateDisplay(with: button.description)
+
+        switch button {
+        case .number(let int):
+            presenter.handleNumberButton(with: int)
+        case .baseOperation(let baseOperation):
+            switch baseOperation {
+            default:
+                break
+            }
+        case .algebraicOperation(let algebraicOperation):
+            switch algebraicOperation {
+            default:
+                break
+            }
+        }
     }
 
     func collectionView(
