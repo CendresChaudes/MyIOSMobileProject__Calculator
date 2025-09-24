@@ -12,6 +12,7 @@ protocol IMainPresenter {
 
     var buttons: [CalculatorButton.Button] { get }
     func handleNumberButton(with number: Int)
+    func handleClearButton()
 }
 
 final class MainPresenter {
@@ -46,6 +47,14 @@ extension MainPresenter: IMainPresenter {
         displayText += number
         updateDisplay(with: number)
     }
+
+    func handleClearButton() {
+        let text = ""
+
+        displayText = text
+        updateDisplay(with: text)
+    }
+
     private func updateDisplay(with text: String) {
         view.setDisplay(text: displayText)
     }

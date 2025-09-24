@@ -188,6 +188,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             presenter.handleNumberButton(with: int)
         case .baseOperation(let baseOperation):
             switch baseOperation {
+            case .clear:
+                presenter.handleClearButton()
             default:
                 break
             }
