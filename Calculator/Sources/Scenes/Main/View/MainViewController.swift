@@ -188,14 +188,6 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             presenter.handleNumberButton(with: int)
         case .baseOperation(let baseOperation):
             switch baseOperation {
-            case .clear:
-                presenter.handleClearButton()
-            case .changeSign:
-                presenter.handleChangeSignButton()
-            case .percent:
-                presenter.handlePercentButton()
-            case .decimal:
-                presenter.handleDecimalButton()
             case .info:
                 let (title, message) = presenter.handleInfoButton()
 
@@ -209,6 +201,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 alertController.addAction(okAction)
 
                 present(alertController, animated: true)
+            default:
+                presenter.handleSimpleBaseOperationButton(with: baseOperation)
             }
         case .algebraicOperation(let algebraicOperation):
             switch algebraicOperation {

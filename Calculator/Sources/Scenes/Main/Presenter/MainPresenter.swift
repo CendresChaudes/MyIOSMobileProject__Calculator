@@ -12,10 +12,7 @@ protocol IMainPresenter {
 
     var buttons: [CalculatorButton.Button] { get }
     func handleNumberButton(with number: Int)
-    func handleClearButton()
-    func handleChangeSignButton()
-    func handlePercentButton()
-    func handleDecimalButton()
+    func handleSimpleBaseOperationButton(with operation: CalculatorButton.Button.Operation.Base)
     func handleInfoButton() -> (title: String, message: String)
 }
 
@@ -57,14 +54,33 @@ extension MainPresenter: IMainPresenter {
         updateDisplay(with: displayText)
     }
 
-    func handleClearButton() {
+    func handleSimpleBaseOperationButton(with operation: CalculatorButton.Button.Operation.Base) {
+        switch operation {
+        case .clear:
+            handleClearButton()
+        case .changeSign:
+            handleChangeSignButton()
+        case .percent:
+            handlePercentButton()
+        case .decimal:
+            handleDecimalButton()
+        default:
+            fatalError(#function + ": unsupported operation")
+        }
+    }
+
+    func handleInfoButton() -> (title: String, message: String) {
+        (title: "Информация", message: "Разработчик: @CendresChaudes")
+    }
+
+    private func handleClearButton() {
         let text = ""
 
         displayText = text
         updateDisplay(with: displayText)
     }
 
-    func handleChangeSignButton() {
+    private func handleChangeSignButton() {
         guard Double(displayText) != nil && !displayText.isEmpty else {
             displayText = ERROR_MESSAGE
             updateDisplay(with: displayText)
@@ -80,7 +96,7 @@ extension MainPresenter: IMainPresenter {
         updateDisplay(with: displayText)
     }
 
-    func handlePercentButton() {
+    private func handlePercentButton() {
         guard let value = Double(displayText) else {
             displayText = ERROR_MESSAGE
             updateDisplay(with: displayText)
@@ -94,7 +110,7 @@ extension MainPresenter: IMainPresenter {
         updateDisplay(with: displayText)
     }
 
-    func handleDecimalButton() {
+    private func handleDecimalButton() {
         if displayText == "" {
             displayText = "0."
         } else if Double(displayText) != nil && !displayText.contains(".") {
@@ -104,10 +120,6 @@ extension MainPresenter: IMainPresenter {
         }
 
         updateDisplay(with: displayText)
-    }
-
-    func handleInfoButton() -> (title: String, message: String) {
-        (title: "Информация", message: "Разработчик: @CendresChaudes")
     }
 
     private func updateDisplay(with text: String) {
