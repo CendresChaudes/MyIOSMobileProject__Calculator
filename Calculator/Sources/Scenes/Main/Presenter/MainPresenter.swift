@@ -51,14 +51,14 @@ extension MainPresenter: IMainPresenter {
 
         let number = String(number)
         displayText += number
-        updateDisplay(with: number)
+        updateDisplay(with: displayText)
     }
 
     func handleClearButton() {
         let text = ""
 
         displayText = text
-        updateDisplay(with: text)
+        updateDisplay(with: displayText)
     }
 
     func handleChangeSignButton() {
@@ -83,6 +83,6 @@ extension MainPresenter: IMainPresenter {
     }
 
     private func updateDisplay(with text: String) {
-        view.setDisplay(text: displayText)
+        view.setDisplay(text: text)
     }
 }
