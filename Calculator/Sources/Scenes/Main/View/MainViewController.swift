@@ -194,6 +194,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 presenter.handleChangeSignButton()
             case .percent:
                 presenter.handlePercentButton()
+            case .decimal:
+                presenter.handleDecimalButton()
             default:
                 break
             }

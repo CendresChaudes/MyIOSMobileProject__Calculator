@@ -93,6 +93,18 @@ extension MainPresenter: IMainPresenter {
         updateDisplay(with: displayText)
     }
 
+    func handleDecimalButton() {
+        if displayText == "" {
+            displayText = "0."
+        } else if Double(displayText) != nil && !displayText.contains(".") {
+            displayText += "."
+        } else if !displayText.contains(".") {
+            displayText = ERROR_MESSAGE
+        }
+
+        updateDisplay(with: displayText)
+    }
+
     private func updateDisplay(with text: String) {
         view.setDisplay(text: text)
     }
