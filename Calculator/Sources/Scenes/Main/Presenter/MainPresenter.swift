@@ -6,7 +6,7 @@
 //  Copyright © 2025 Роман Пронин (Personal Team). All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol IMainPresenter {
 
@@ -16,6 +16,7 @@ protocol IMainPresenter {
     func handleChangeSignButton()
     func handlePercentButton()
     func handleDecimalButton()
+    func handleInfoButton() -> (title: String, message: String)
 }
 
 final class MainPresenter {
@@ -103,6 +104,10 @@ extension MainPresenter: IMainPresenter {
         }
 
         updateDisplay(with: displayText)
+    }
+
+    func handleInfoButton() -> (title: String, message: String) {
+        (title: "Информация", message: "Разработчик: @CendresChaudes")
     }
 
     private func updateDisplay(with text: String) {

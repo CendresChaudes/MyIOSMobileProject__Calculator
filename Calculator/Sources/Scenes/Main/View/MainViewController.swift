@@ -196,8 +196,19 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 presenter.handlePercentButton()
             case .decimal:
                 presenter.handleDecimalButton()
-            default:
-                break
+            case .info:
+                let (title, message) = presenter.handleInfoButton()
+
+                let alertController = UIAlertController(
+                    title: title,
+                    message: message,
+                    preferredStyle: .alert
+                )
+
+                let okAction = UIAlertAction(title: "ОК", style: .default) { _ in }
+                alertController.addAction(okAction)
+
+                present(alertController, animated: true)
             }
         case .algebraicOperation(let algebraicOperation):
             switch algebraicOperation {
