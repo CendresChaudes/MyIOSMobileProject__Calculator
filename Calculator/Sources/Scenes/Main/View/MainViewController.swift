@@ -190,6 +190,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             switch baseOperation {
             case .clear:
                 presenter.handleClearButton()
+            case .changeSign:
+                presenter.handleChangeSignButton()
             default:
                 break
             }

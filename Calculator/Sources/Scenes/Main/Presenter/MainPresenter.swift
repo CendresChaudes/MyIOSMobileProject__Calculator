@@ -13,6 +13,7 @@ protocol IMainPresenter {
     var buttons: [CalculatorButton.Button] { get }
     func handleNumberButton(with number: Int)
     func handleClearButton()
+    func handleChangeSignButton()
 }
 
 final class MainPresenter {
@@ -21,6 +22,7 @@ final class MainPresenter {
     private unowned let view: IMainViewController
 
     private var displayText = ""
+    private let ERROR_MESSAGE = "Ошибка"
 
     struct Dependencies {
 
@@ -43,6 +45,10 @@ extension MainPresenter: IMainPresenter {
     }
 
     func handleNumberButton(with number: Int) {
+        if displayText == ERROR_MESSAGE {
+            displayText = ""
+        }
+
         let number = String(number)
         displayText += number
         updateDisplay(with: number)
@@ -53,6 +59,27 @@ extension MainPresenter: IMainPresenter {
 
         displayText = text
         updateDisplay(with: text)
+    }
+
+    func handleChangeSignButton() {
+        guard Int(displayText) != nil && !displayText.isEmpty else {
+            displayText = ERROR_MESSAGE
+            updateDisplay(with: displayText)
+            return
+        }
+
+        if displayText.first == "-" {
+            displayText.removeFirst()
+        } else {
+            displayText = "-" + displayText
+        }
+
+        updateDisplay(with: displayText)
+    }
+            displayText = ERROR_MESSAGE
+        }
+
+        updateDisplay(with: displayText)
     }
 
     private func updateDisplay(with text: String) {
