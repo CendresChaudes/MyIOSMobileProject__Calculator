@@ -14,6 +14,7 @@ protocol IMainPresenter {
     func handleNumberButton(with number: Int)
     func handleClearButton()
     func handleChangeSignButton()
+    func handlePercentButton()
 }
 
 final class MainPresenter {
@@ -76,7 +77,16 @@ extension MainPresenter: IMainPresenter {
 
         updateDisplay(with: displayText)
     }
+
+    func handlePercentButton() {
+        guard let value = Double(displayText) else {
             displayText = ERROR_MESSAGE
+            updateDisplay(with: displayText)
+            return
+        }
+
+        if displayText != "0" {
+            displayText = "\(Decimal(value) * 0.01)"
         }
 
         updateDisplay(with: displayText)

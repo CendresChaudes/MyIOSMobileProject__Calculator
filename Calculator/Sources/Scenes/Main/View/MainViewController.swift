@@ -192,6 +192,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 presenter.handleClearButton()
             case .changeSign:
                 presenter.handleChangeSignButton()
+            case .percent:
+                presenter.handlePercentButton()
             default:
                 break
             }

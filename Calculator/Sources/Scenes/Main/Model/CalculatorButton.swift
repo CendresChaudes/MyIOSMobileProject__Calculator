@@ -20,7 +20,7 @@ struct CalculatorButton {
             enum Base {
                 case clear
                 case changeSign
-                case percentage
+                case percent
                 case decimal
                 case info
             }
@@ -58,7 +58,7 @@ extension CalculatorButton.Button: CustomStringConvertible {
                 return "AC"
             case .changeSign:
                 return "±"
-            case .percentage:
+            case .percent:
                 return "%"
             case .decimal:
                 return "."
@@ -90,7 +90,7 @@ extension CalculatorButton: ICalculatorButton {
         [
             .baseOperation(.clear),
             .baseOperation(.changeSign),
-            .baseOperation(.percentage),
+            .baseOperation(.percent),
             .algebraicOperation(.divide),
             .number(7),
             .number(8),
