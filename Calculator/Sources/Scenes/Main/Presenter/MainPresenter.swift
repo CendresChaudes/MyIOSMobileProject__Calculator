@@ -84,18 +84,39 @@ extension MainPresenter: IMainPresenter {
     }
 
     func handleAlgebraicOperationButton(with operation: CalculatorButton.Button.Operation.Algebraic) {
-        switch operation {
-        case .sum:
-            handleSumButton()
-        case .subtract:
-            handleSubtractButton()
-        case .multiply:
-            handleMultiplyButton()
-        case .divide:
-            handleDivideButton()
-        default:
-            fatalError(#function + ": unsupported operation")
+        guard displayText != ERROR_MESSAGE else { return }
+        guard let newValue = Double(displayText) else { return }
+
+        if tempValue == "" {
+            tempValue = displayText
+        } else if operation == .divide && newValue == 0 {
+            tempValue = ERROR_MESSAGE
+            updateDisplay(with: ERROR_MESSAGE)
+            return
+        } else {
+            let oldValue = Double(tempValue) ?? 0
+
+            var sum = oldValue
+            switch operation {
+            case .sum:
+                sum += newValue
+            case .subtract:
+                sum -= newValue
+            case .multiply:
+                sum *= newValue
+            case .divide:
+                sum /= newValue
+            default:
+                fatalError(#function + ": unsupported operation")
+            }
+
+            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
+            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
         }
+
+        displayText = ""
+        updateDisplay(with: displayText)
+        print("Current result: \(tempValue)")
     }
 
     private func handleChangeSignButton() {
@@ -138,82 +159,6 @@ extension MainPresenter: IMainPresenter {
         }
 
         updateDisplay(with: displayText)
-    }
-
-    private func handleSumButton() {
-        guard displayText != ERROR_MESSAGE else { return }
-        guard let newValue = Double(displayText) else { return }
-
-        if tempValue == "" {
-            tempValue = displayText
-        } else {
-            let oldValue = Double(tempValue) ?? 0
-            let sum = oldValue + newValue
-            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
-        }
-
-        displayText = ""
-        updateDisplay(with: displayText)
-        print("Current sum: \(tempValue)")
-    }
-
-    private func handleSubtractButton() {
-        guard displayText != ERROR_MESSAGE else { return }
-        guard let newValue = Double(displayText) else { return }
-
-        if tempValue == "" {
-            tempValue = displayText
-        } else {
-            let oldValue = Double(tempValue) ?? 0
-            let sum = oldValue - newValue
-            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
-        }
-
-        displayText = ""
-        updateDisplay(with: displayText)
-        print("Current subtract: \(tempValue)")
-    }
-
-    private func handleMultiplyButton() {
-        guard displayText != ERROR_MESSAGE else { return }
-        guard let newValue = Double(displayText) else { return }
-
-        if tempValue == "" {
-            tempValue = displayText
-        } else {
-            let oldValue = Double(tempValue) ?? 0
-            let sum = oldValue * newValue
-            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
-        }
-
-        displayText = ""
-        updateDisplay(with: displayText)
-        print("Current multiplication: \(tempValue)")
-    }
-
-    private func handleDivideButton() {
-        guard displayText != ERROR_MESSAGE else { return }
-        guard let newValue = Double(displayText) else { return }
-
-        if tempValue == "" {
-            tempValue = displayText
-        } else if newValue == 0 {
-            tempValue = ERROR_MESSAGE
-            updateDisplay(with: ERROR_MESSAGE)
-            return
-        } else {
-            let oldValue = Double(tempValue) ?? 0
-            let sum = oldValue / newValue
-            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
-        }
-
-        displayText = ""
-        updateDisplay(with: displayText)
-        print("Current division: \(tempValue)")
     }
 
     private func updateDisplay(with text: String) {
