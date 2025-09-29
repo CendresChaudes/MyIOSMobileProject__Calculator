@@ -26,7 +26,7 @@ struct CalculatorButton {
             }
 
             enum Algebraic {
-                case add
+                case sum
                 case subtract
                 case multiply
                 case divide
@@ -67,7 +67,7 @@ extension CalculatorButton.Button: CustomStringConvertible {
             }
         case .algebraicOperation(let algebraicOperation):
             switch algebraicOperation {
-            case .add:
+            case .sum:
                 return "+"
             case .subtract:
                 return "-"
@@ -103,7 +103,7 @@ extension CalculatorButton: ICalculatorButton {
             .number(1),
             .number(2),
             .number(3),
-            .algebraicOperation(.add),
+            .algebraicOperation(.sum),
             .baseOperation(.info),
             .number(0),
             .baseOperation(.decimal),

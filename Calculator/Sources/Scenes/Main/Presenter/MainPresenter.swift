@@ -14,6 +14,7 @@ protocol IMainPresenter {
     func handleNumberButton(with number: Int)
     func handleSimpleBaseOperationButton(with operation: CalculatorButton.Button.Operation.Base)
     func handleInfoButton() -> (title: String, message: String)
+    func handleAlgebraicOperationButton(with operation: CalculatorButton.Button.Operation.Algebraic)
 }
 
 final class MainPresenter {
@@ -21,6 +22,7 @@ final class MainPresenter {
     private let model: ICalculatorButton
     private unowned let view: IMainViewController
 
+    private var tempValue = ""
     private var displayText = ""
     private let ERROR_MESSAGE = "Ошибка"
 
@@ -76,8 +78,18 @@ extension MainPresenter: IMainPresenter {
     private func handleClearButton() {
         let text = ""
 
+        tempValue = ""
         displayText = text
         updateDisplay(with: displayText)
+    }
+
+    func handleAlgebraicOperationButton(with operation: CalculatorButton.Button.Operation.Algebraic) {
+        switch operation {
+        case .sum:
+            handleSumButton()
+        default:
+            fatalError(#function + ": unsupported operation")
+        }
     }
 
     private func handleChangeSignButton() {
@@ -120,6 +132,24 @@ extension MainPresenter: IMainPresenter {
         }
 
         updateDisplay(with: displayText)
+    }
+
+    private func handleSumButton() {
+        guard displayText != ERROR_MESSAGE else { return }
+        guard let newValue = Double(displayText) else { return }
+
+        if tempValue == "" {
+            tempValue = displayText
+        } else {
+            let oldValue = Double(tempValue) ?? 0
+            let sum = oldValue + newValue
+            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
+            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
+        }
+
+        displayText = ""
+        updateDisplay(with: displayText)
+        print("Current sum: \(tempValue)")
     }
 
     private func updateDisplay(with text: String) {

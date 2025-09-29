@@ -205,10 +205,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
                 presenter.handleSimpleBaseOperationButton(with: baseOperation)
             }
         case .algebraicOperation(let algebraicOperation):
-            switch algebraicOperation {
-            default:
-                break
-            }
+            presenter.handleAlgebraicOperationButton(with: algebraicOperation)
         }
     }
 
