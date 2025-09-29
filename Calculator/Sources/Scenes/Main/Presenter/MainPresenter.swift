@@ -89,6 +89,8 @@ extension MainPresenter: IMainPresenter {
             handleSumButton()
         case .subtract:
             handleSubtractButton()
+        case .multiply:
+            handleMultiplyButton()
         default:
             fatalError(#function + ": unsupported operation")
         }
@@ -170,6 +172,24 @@ extension MainPresenter: IMainPresenter {
         displayText = ""
         updateDisplay(with: displayText)
         print("Current subtract: \(tempValue)")
+    }
+
+    private func handleMultiplyButton() {
+        guard displayText != ERROR_MESSAGE else { return }
+        guard let newValue = Double(displayText) else { return }
+
+        if tempValue == "" {
+            tempValue = displayText
+        } else {
+            let oldValue = Double(tempValue) ?? 0
+            let sum = oldValue * newValue
+            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
+            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
+        }
+
+        displayText = ""
+        updateDisplay(with: displayText)
+        print("Current multiplication: \(tempValue)")
     }
 
     private func updateDisplay(with text: String) {
