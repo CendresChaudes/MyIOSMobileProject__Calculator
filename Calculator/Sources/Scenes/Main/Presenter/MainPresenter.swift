@@ -96,50 +96,48 @@ extension MainPresenter: IMainPresenter {
         if operation == .equal {
             let oldValue = Double(tempValue) ?? 0
 
-            var sum = oldValue
+            var result = oldValue
             switch previousAlgebraicOperation {
             case .sum:
-                sum += newValue
-            case .subtract:
-                sum -= newValue
-            case .multiply:
-                sum *= newValue
-            case .divide:
-                sum /= newValue
-            default:
-                fatalError(#function + ": unsupported operation")
-            }
-
-            let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            displayText = String(format: isInt ? "%.0f" : String(sum), sum)
-            updateDisplay(with: displayText)
-            previousAlgebraicOperation = .equal
-            tempValue = ""
-            return
-        } else if tempValue == "" {
-            let oldValue: Double = 0
-
-            var result = oldValue
-            switch operation {
-            case .sum:
-                previousAlgebraicOperation = .sum
                 result += newValue
             case .subtract:
-                previousAlgebraicOperation = .subtract
                 result -= newValue
             case .multiply:
-                previousAlgebraicOperation = .multiply
                 result *= newValue
             case .divide:
-                previousAlgebraicOperation = .divide
+                if newValue == 0 {
+                    displayText = ERROR_MESSAGE
+                    updateDisplay(with: displayText)
+                    return
+                }
+
                 result /= newValue
             default:
                 fatalError(#function + ": unsupported operation")
             }
 
             let isInt = result.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(result), result)
-        } else if operation == .divide && newValue == 0 {
+            displayText = String(format: isInt ? "%.0f" : String(result), result)
+            updateDisplay(with: displayText)
+            previousAlgebraicOperation = .equal
+            tempValue = ""
+            return
+        } else if tempValue == "" {
+            switch operation {
+            case .sum:
+                previousAlgebraicOperation = .sum
+            case .subtract:
+                previousAlgebraicOperation = .subtract
+            case .multiply:
+                previousAlgebraicOperation = .multiply
+            case .divide:
+                previousAlgebraicOperation = .divide
+            default:
+                fatalError(#function + ": unsupported operation")
+            }
+
+            tempValue = displayText
+        } else if previousAlgebraicOperation == .divide && newValue == 0 {
             tempValue = ERROR_MESSAGE
             updateDisplay(with: ERROR_MESSAGE)
             return
