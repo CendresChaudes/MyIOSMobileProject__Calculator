@@ -22,6 +22,7 @@ final class MainPresenter {
     private let model: ICalculatorButton
     private unowned let view: IMainViewController
 
+    private var previousNumber: Int?
     private var previousAlgebraicOperation: CalculatorButton.Button.Operation.Algebraic?
     private var tempValue = ""
     private var displayText = ""
@@ -48,10 +49,12 @@ extension MainPresenter: IMainPresenter {
     }
 
     func handleNumberButton(with number: Int) {
-        if displayText == ERROR_MESSAGE || previousAlgebraicOperation != nil || previousAlgebraicOperation == .equal {
+        if displayText == ERROR_MESSAGE || (previousAlgebraicOperation != nil && previousNumber == nil)
+            || previousAlgebraicOperation == .equal {
             displayText = ""
         }
 
+        previousNumber = number
         let number = String(number)
         displayText += number
         updateDisplay(with: displayText)
@@ -83,6 +86,7 @@ extension MainPresenter: IMainPresenter {
         displayText = text
         updateDisplay(with: displayText)
         previousAlgebraicOperation = nil
+        previousNumber = nil
     }
 
     func handleAlgebraicOperationButton(with operation: CalculatorButton.Button.Operation.Algebraic) {
@@ -161,6 +165,7 @@ extension MainPresenter: IMainPresenter {
             tempValue = String(format: isInt ? "%.0f" : String(result), result)
         }
 
+        previousNumber = nil
         displayText = tempValue
         updateDisplay(with: displayText)
     }
