@@ -21,11 +21,11 @@ final class Container: UIView {
 
     func setupConstraints(view: UIView) {
         let HORIZONTAL_PADDING: CGFloat = 16
-        let VERTICAL_PADDING: CGFloat = 36
+        let VERTICAL_PADDING: CGFloat = 8
 
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: view.topAnchor, constant: VERTICAL_PADDING),
-            self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -VERTICAL_PADDING),
+            self.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: VERTICAL_PADDING),
+            self.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -VERTICAL_PADDING),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: HORIZONTAL_PADDING),
             self.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -HORIZONTAL_PADDING),
         ])

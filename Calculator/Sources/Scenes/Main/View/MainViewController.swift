@@ -22,6 +22,7 @@ final class MainViewController: UIViewController {
     var presenter: IMainPresenter!
 
     private var container: Container!
+    private var uiModeSwitch: Switch!
     private var displayText: UILabel!
     private var keyboard: UICollectionView!
     private var keyboardHeightConstraint: NSLayoutConstraint!
@@ -41,6 +42,8 @@ final class MainViewController: UIViewController {
     }
 
     private func setupUI() {
+        view.backgroundColor = Asset.background.color
+
         // Container
         container = Container()
         view.addSubview(container)
@@ -63,6 +66,30 @@ final class MainViewController: UIViewController {
             displayContainer: displayContainer,
             displayText: displayText
         )
+
+        // UI mode
+        let currentUIMode: UIUserInterfaceStyle = self.overrideUserInterfaceStyle
+        let isDarkModeOn = currentUIMode == .dark
+        uiModeSwitch = Switch(isOn: isDarkModeOn)
+        uiModeSwitch.addTarget(self, action: #selector(toggleUIMode), for: .valueChanged)
+        container.addSubview(uiModeSwitch)
+        setupUIModeSwitchConstraints()
+    }
+
+    @objc
+    private func toggleUIMode() {
+        if self.overrideUserInterfaceStyle == .dark {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            self.overrideUserInterfaceStyle = .dark
+        }
+    }
+
+    private func setupUIModeSwitchConstraints() {
+        NSLayoutConstraint.activate([
+            uiModeSwitch.topAnchor.constraint(equalTo: container.topAnchor),
+            uiModeSwitch.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+        ])
     }
 
     private func makeKeyboard() -> UICollectionView {
