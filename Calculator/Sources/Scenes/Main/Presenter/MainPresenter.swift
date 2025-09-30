@@ -22,6 +22,7 @@ final class MainPresenter {
     private let model: ICalculatorButton
     private unowned let view: IMainViewController
 
+    private var previousAlgebraicOperation: CalculatorButton.Button.Operation.Algebraic?
     private var tempValue = ""
     private var displayText = ""
     private let ERROR_MESSAGE = "Ошибка"
@@ -47,7 +48,7 @@ extension MainPresenter: IMainPresenter {
     }
 
     func handleNumberButton(with number: Int) {
-        if displayText == ERROR_MESSAGE {
+        if displayText == ERROR_MESSAGE || previousAlgebraicOperation != nil || previousAlgebraicOperation == .equal {
             displayText = ""
         }
 
@@ -78,26 +79,21 @@ extension MainPresenter: IMainPresenter {
     private func handleClearButton() {
         let text = ""
 
-        tempValue = ""
+        tempValue = text
         displayText = text
         updateDisplay(with: displayText)
+        previousAlgebraicOperation = nil
     }
 
     func handleAlgebraicOperationButton(with operation: CalculatorButton.Button.Operation.Algebraic) {
         guard displayText != ERROR_MESSAGE else { return }
         guard let newValue = Double(displayText) else { return }
 
-        if tempValue == "" {
-            tempValue = displayText
-        } else if operation == .divide && newValue == 0 {
-            tempValue = ERROR_MESSAGE
-            updateDisplay(with: ERROR_MESSAGE)
-            return
-        } else {
+        if operation == .equal {
             let oldValue = Double(tempValue) ?? 0
 
             var sum = oldValue
-            switch operation {
+            switch previousAlgebraicOperation {
             case .sum:
                 sum += newValue
             case .subtract:
@@ -111,12 +107,62 @@ extension MainPresenter: IMainPresenter {
             }
 
             let isInt = sum.truncatingRemainder(dividingBy: 1) == 0
-            tempValue = String(format: isInt ? "%.0f" : String(sum), sum)
+            displayText = String(format: isInt ? "%.0f" : String(sum), sum)
+            updateDisplay(with: displayText)
+            previousAlgebraicOperation = .equal
+            tempValue = ""
+            return
+        } else if tempValue == "" {
+            let oldValue: Double = 0
+
+            var result = oldValue
+            switch operation {
+            case .sum:
+                previousAlgebraicOperation = .sum
+                result += newValue
+            case .subtract:
+                previousAlgebraicOperation = .subtract
+                result -= newValue
+            case .multiply:
+                previousAlgebraicOperation = .multiply
+                result *= newValue
+            case .divide:
+                previousAlgebraicOperation = .divide
+                result /= newValue
+            default:
+                fatalError(#function + ": unsupported operation")
+            }
+
+            let isInt = result.truncatingRemainder(dividingBy: 1) == 0
+            tempValue = String(format: isInt ? "%.0f" : String(result), result)
+        } else if operation == .divide && newValue == 0 {
+            tempValue = ERROR_MESSAGE
+            updateDisplay(with: ERROR_MESSAGE)
+            return
+        } else {
+            let oldValue = Double(tempValue) ?? 0
+
+            var result = oldValue
+            switch previousAlgebraicOperation {
+            case .sum:
+                result += newValue
+            case .subtract:
+                result -= newValue
+            case .multiply:
+                result *= newValue
+            case .divide:
+                result /= newValue
+            default:
+                fatalError(#function + ": unsupported operation")
+            }
+
+            previousAlgebraicOperation = operation
+            let isInt = result.truncatingRemainder(dividingBy: 1) == 0
+            tempValue = String(format: isInt ? "%.0f" : String(result), result)
         }
 
-        displayText = ""
+        displayText = tempValue
         updateDisplay(with: displayText)
-        print("Current result: \(tempValue)")
     }
 
     private func handleChangeSignButton() {
