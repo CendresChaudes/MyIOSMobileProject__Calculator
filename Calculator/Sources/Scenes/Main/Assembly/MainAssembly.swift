@@ -21,6 +21,7 @@ enum MainAssembly: IAssembly {
         )
 
         controller.presenter = presenter
+        controller.themeManager = UserDefaultsThemeManager.shared
 
         return controller
     }

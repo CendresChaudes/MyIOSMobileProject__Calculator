@@ -19,17 +19,23 @@ protocol IMainViewController: AnyObject {
 
 final class MainViewController: UIViewController {
 
+    struct Dependencies {
+
+        let themeManager: IUserDefaultsThemeManager
+    }
+
     var presenter: IMainPresenter!
+    var themeManager: IUserDefaultsThemeManager!
 
     private var container: Container!
-    private var uiModeSwitch: Switch!
+    private var themeSwitch: Switch!
     private var displayText: UILabel!
     private var keyboard: UICollectionView!
     private var keyboardHeightConstraint: NSLayoutConstraint!
 
+    private var calculatorCellSize: CGFloat!
     private let GAP: CGFloat = 12
     private let COLUMNS_COUNT = 4
-    private var calculatorCellSize: CGFloat!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +48,8 @@ final class MainViewController: UIViewController {
     }
 
     private func setupUI() {
+        let currentTheme: UIUserInterfaceStyle = themeManager.getTheme()
+        self.overrideUserInterfaceStyle = currentTheme
         view.backgroundColor = Asset.background.color
 
         // Container
@@ -67,28 +75,29 @@ final class MainViewController: UIViewController {
             displayText: displayText
         )
 
-        // UI mode
-        let currentUIMode: UIUserInterfaceStyle = self.overrideUserInterfaceStyle
-        let isDarkModeOn = currentUIMode == .dark
-        uiModeSwitch = Switch(isOn: isDarkModeOn)
-        uiModeSwitch.addTarget(self, action: #selector(toggleUIMode), for: .valueChanged)
-        container.addSubview(uiModeSwitch)
-        setupUIModeSwitchConstraints()
+        // Theme switch
+        let isDarkTheme = currentTheme == .dark
+        themeSwitch = Switch(isOn: isDarkTheme)
+        themeSwitch.addTarget(self, action: #selector(toggleTheme), for: .valueChanged)
+        container.addSubview(themeSwitch)
+        setupThemeSwitchConstraints()
     }
 
     @objc
-    private func toggleUIMode() {
-        if self.overrideUserInterfaceStyle == .dark {
-            self.overrideUserInterfaceStyle = .light
+    private func toggleTheme() {
+        if themeManager.getTheme() == .dark {
+            themeManager.saveTheme(.light)
         } else {
-            self.overrideUserInterfaceStyle = .dark
+            themeManager.saveTheme(.dark)
         }
+
+        self.overrideUserInterfaceStyle = themeManager.getTheme()
     }
 
-    private func setupUIModeSwitchConstraints() {
+    private func setupThemeSwitchConstraints() {
         NSLayoutConstraint.activate([
-            uiModeSwitch.topAnchor.constraint(equalTo: container.topAnchor),
-            uiModeSwitch.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            themeSwitch.topAnchor.constraint(equalTo: container.topAnchor),
+            themeSwitch.trailingAnchor.constraint(equalTo: container.trailingAnchor),
         ])
     }
 

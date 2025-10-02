@@ -37,6 +37,8 @@
 		A328C198691215762CB6AF0D /* README.TXT in Resources */ = {isa = PBXBuildFile; fileRef = 74E6E2961379CEC0C564EB4B /* README.TXT */; };
 		A6E0F72DFF312DE6D4167F2B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9562822FD70382487A6137F0 /* Podfile */; };
 		B2CAA7712E8C611D008F5A53 /* Switch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAA7702E8C611D008F5A53 /* Switch.swift */; };
+		B2CAA7752E8E9B52008F5A53 /* UserDefaultsThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAA7742E8E9B52008F5A53 /* UserDefaultsThemeManager.swift */; };
+		B2CAA77A2E8E9E56008F5A53 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CAA7792E8E9E56008F5A53 /* UserDefaultsManager.swift */; };
 		B48AA91A53F8E49A60AD81F3 /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 622BAEB47C5A202166B44AE0 /* ci.yml */; };
 		B4E56A38802D9A253FF379CA /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70E0993747339096276FA10B /* Calculator.xcdatamodeld */; };
 		B640C6BF6EB3B1949E4035B9 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BD72B6EAB16B0C246EAAF7 /* UIViewController+Preview.swift */; };
@@ -165,6 +167,8 @@
 		AE6EB719B0D9B1EEF172084C /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		B1CE0BC9672B944D99626554 /* .tuist-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".tuist-version"; sourceTree = "<group>"; };
 		B2CAA7702E8C611D008F5A53 /* Switch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switch.swift; sourceTree = "<group>"; };
+		B2CAA7742E8E9B52008F5A53 /* UserDefaultsThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsThemeManager.swift; sourceTree = "<group>"; };
+		B2CAA7792E8E9E56008F5A53 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		B62359B6448F86584F91F6E7 /* TuistFonts+Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistFonts+Calculator.swift"; sourceTree = "<group>"; };
 		C244163083705B8C78354318 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		C3CAD04EA9B3316E630437E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -274,7 +278,6 @@
 		3445057A7E31D44F487F8690 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				375FED7A55DC574C0F6EDAA2 /* CoreData */,
 				78A4D7B0381F0337A270CE4C /* Resources */,
 				937CA5FDA3CB0A339375DD7A /* Sources */,
 				B5E785353EE72EFF51BABB62 /* Support */,
@@ -291,14 +294,6 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		375FED7A55DC574C0F6EDAA2 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				70E0993747339096276FA10B /* Calculator.xcdatamodeld */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		396ECF972C93B0797C4D76F0 /* workflows */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +307,7 @@
 			children = (
 				74CA8942E6A873CDDB2DF774 /* AppDelegate.swift */,
 				6C5DAD0B82F0CAF3666165F1 /* SceneDelegate.swift */,
+				70E0993747339096276FA10B /* Calculator.xcdatamodeld */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -406,6 +402,8 @@
 		78A5DC6690F49DDF56F369EB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B2CAA77B2E8EBBD2008F5A53 /* Theme */,
+				B2CAA7762E8E9B60008F5A53 /* Managers */,
 				0330FE5AE9A5F23654CDBD6F /* Components */,
 				7241C29441AA0204E03ADD1A /* Extensions */,
 				34268E42A62C15EBCB7F9E81 /* Protocols */,
@@ -505,6 +503,38 @@
 				B2CAA7702E8C611D008F5A53 /* Switch.swift */,
 			);
 			path = Switch;
+			sourceTree = "<group>";
+		};
+		B2CAA7722E8E9975008F5A53 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B2CAA7732E8E9993008F5A53 /* UserDefaults */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B2CAA7732E8E9993008F5A53 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				B2CAA7792E8E9E56008F5A53 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		B2CAA7762E8E9B60008F5A53 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B2CAA7722E8E9975008F5A53 /* Storage */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B2CAA77B2E8EBBD2008F5A53 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B2CAA7742E8E9B52008F5A53 /* UserDefaultsThemeManager.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		B5E785353EE72EFF51BABB62 /* Support */ = {
@@ -936,12 +966,14 @@
 				65BCF51D1E8C97734B943B77 /* ButtonFactory.swift in Sources */,
 				361063A47701227120EA6F2B /* Container.swift in Sources */,
 				B640C6BF6EB3B1949E4035B9 /* UIViewController+Preview.swift in Sources */,
+				B2CAA7752E8E9B52008F5A53 /* UserDefaultsThemeManager.swift in Sources */,
 				4EED91E96E5885DEA04AC2E3 /* IAssembly.swift in Sources */,
 				0297D60D4D00754AC877BFF2 /* MainAssembly.swift in Sources */,
 				833CA288EA0BD6D85E4A7121 /* CalculatorButton.swift in Sources */,
 				DF30762C93EE1EB7DD25F1B8 /* MainPresenter.swift in Sources */,
 				BD5AD09B85A4E58E02784E73 /* CalculatorViewCell.swift in Sources */,
 				35A20B048DE223EB8CDC74A8 /* MainViewController.swift in Sources */,
+				B2CAA77A2E8E9E56008F5A53 /* UserDefaultsManager.swift in Sources */,
 				EDBB54397ECF6269968968EF /* TuistAssets+Calculator.swift in Sources */,
 				1FFD206BB96944E62C36C4F2 /* TuistBundle+Calculator.swift in Sources */,
 				7DC84573EC7D18690997BCEA /* TuistCoreData+Calculator.swift in Sources */,
